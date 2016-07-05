@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>world | 1000 words a Day</title>
+    <title>Visual Format Content | 1000 words a Day</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="cnFeat">
     
-    <meta name="description" content="h1
-1234&amp;lt;script&amp;gt;    var get = doument.getElementById(&amp;apos;get&amp;apos;);    get.offsetHight = a;&amp;lt;/script&amp;gt;
-这是我的代码，你看看啦">
+    <meta name="description" content="1.在创建了BFC的元素中，其子元素按文档流一个接一个的放置，垂直方向上他们的起点都是一个包含块的顶部，两个相邻的元素之间的垂直距离取决于‘margin’特性。
+注意1：两个相邻的普通流中的块框在垂直位置的空白边会发生折叠现象，也就是处于同一个BFC中的两个垂直窗口的 margin会重叠。解决方法：">
     
     
     
@@ -67,7 +66,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/07/world/" title="world" itemprop="url">world</a>
+      <a href="/2016/06/07/world/" title="Visual Format Content" itemprop="url">Visual Format Content</a>
   </h1>
   <p class="article-author">By
     
@@ -75,7 +74,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-06-07T05:19:56.000Z" itemprop="datePublished">2016-06-07</time>
-    更新日期:<time datetime="2016-06-07T09:41:38.060Z" itemprop="dateModified">2016-06-07</time>
+    更新日期:<time datetime="2016-07-05T11:43:44.772Z" itemprop="dateModified">2016-07-05</time>
     
   </p>
 </header>
@@ -84,12 +83,20 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#h1"><span class="toc-number">1.</span> <span class="toc-text">h1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是我的代码，你看看啦"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">这是我的代码，你看看啦</span></a></li></ol></li></ol></li></ol></li></ol>
+		
 		</div>
 		
-		<h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><p><img src="http://ww2.sinaimg.cn/large/71e436ebgw1f4msdvasi0j20c80gnt9j.jpg" alt="Mou icon"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    var get = doument.getElementById(&apos;get&apos;);</span><br><span class="line">    get.offsetHight = a;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="这是我的代码，你看看啦"><a href="#这是我的代码，你看看啦" class="headerlink" title="这是我的代码，你看看啦"></a>这是我的代码，你看看啦</h4>  
+		<p> 1.在创建了BFC的元素中，其子元素按文档流一个接一个的放置，垂直方向上他们的起点都是一个包含块的顶部，两个相邻的元素之间的垂直距离取决于‘margin’特性。</p>
+<p>注意1：两个相邻的普通流中的块框在垂直位置的空白边会发生折叠现象，也就是处于同一个BFC中的两个垂直窗口的 margin会重叠。<br>解决方法：因为生产BFC的元素不会和在流中的子元素发生空白折叠，所以解决这种问题的办法就是要为两个容器添加具有BFC的包裹容器。</p>
+<p>2.在BFC中，每一个元素左外边与包含块的左边相接触（如果从右到左的格式化，就与右边接触），即使存在浮动也是这样（说明浮动都不会离开父元素）；除非这个元素也创建了一个新的BFC；</p>
+<p>3.BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会在布局上影响到外面的元素，外面也影响不到里面；</p>
+<p>4.创建了BFC的元素不能与浮动元素重叠。表格的border-box、块级的替换元素、或是在普通流中创建了新的bfc（如元素的‘overflow’特性不为‘visble’时）的元素不可以与位于相同的BFC中的浮动元素相重叠；</p>
+<p>5.当容器有足够的剩余空间容纳BFC的宽度时，所有浏览器会将BFC放置在浮动元素所在行的剩余空间内。</p>
+<p>6.在IE6 IE7 IE8 Chrome Opera 中，当BFC的宽度介于“容器剩余宽度”与“容器宽度”时，BFC会显示在浮动元素的下一行；</p>
+<p>7.在计算机生成了BFC的元素的高度时，其浮动元素应该参与计算； </p>
+<p><strong>生成BFC的方法：</strong></p>
+<p>float的值不为none。<br>overflow的值不为visible。<br>position的值不为relative和static。<br>display的值为table-cell, table-caption, inline-block中的任何一个。</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 
@@ -98,7 +105,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://www.cnfeat.com/2016/06/07/world/" data-title="world | 1000 words a Day" data-tsina="null" class="share clearfix">
+  <div data-url="http://www.cnfeat.com/2016/06/07/world/" data-title="Visual Format Content | 1000 words a Day" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -132,7 +139,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#h1"><span class="toc-number">1.</span> <span class="toc-text">h1</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#这是我的代码，你看看啦"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">这是我的代码，你看看啦</span></a></li></ol></li></ol></li></ol></li></ol>
+  
   </div>
 
 <div id="asidepart">
